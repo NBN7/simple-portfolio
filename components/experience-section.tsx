@@ -1,69 +1,59 @@
+import { SectionTitle } from '@/components/section-title'
+
 interface Experience {
   company: string
   period: string
   role: string
   description: string
-  highlights: string[]
 }
 
 const experiences: Experience[] = [
   {
-    company: "Tech Company",
-    period: "Jan. 2023 - Present",
-    role: "Frontend Engineer",
-    description: "Building modern web applications and leading frontend architecture decisions.",
-    highlights: [
-      "Developed scalable React component libraries used across multiple products",
-      "Implemented performance optimizations reducing load times by 40%",
-      "Led migration from legacy codebase to Next.js with TypeScript",
-      "Mentored junior developers and conducted code reviews",
-      "Collaborated with design team to implement pixel-perfect UI components",
-    ],
+    company: 'Auravant',
+    period: 'Mar. 2026 - Present',
+    role: 'SSR Frontend Developer',
+    description:
+      "Frontend developer for Auravant with greater responsibilities. I build and maintain microfrontends, the company's internal component library, and scalable web applications for an agricultural sector platform using TypeScript, React.js and Auravant proprietary SDK."
   },
   {
-    company: "Startup Inc.",
-    period: "Jun. 2021 - Dec. 2022",
-    role: "React Developer",
-    description: "Developed user-facing features and improved overall application performance.",
-    highlights: [
-      "Built responsive web applications using React and TypeScript",
-      "Implemented state management solutions with Redux and React Query",
-      "Worked closely with backend team to design and integrate RESTful APIs",
-      "Created automated testing suites improving code coverage to 80%",
-    ],
+    company: 'Auravant',
+    period: 'Jul. 2024 - Mar. 2026',
+    role: 'JR Frontend Developer',
+    description:
+      'Frontend developer for Auravant. I used TypeScript, React.js, shadcn and Auravant proprietary SDK to build microfrontends and web applications for an agricultural sector platform.'
   },
+  {
+    company: 'Sturges Labs LLC',
+    period: 'Mar. 2024 - Aug. 2024',
+    role: 'Fullstack Developer',
+    description:
+      'Fullstack developer for Sturges Labs LLC. I worked on a finance application. For the Frontend, I used TypeScript, Next.js, and MUI. For the Backend, I employed TypeScript, tRPC, Clerk, MySQL and Prisma.'
+  },
+  {
+    company: 'Sturges Labs LLC',
+    period: 'Jan. 2024 - Mar. 2024',
+    role: 'Frontend Developer',
+    description:
+      'Frontend developer for Sturges Labs LLC. I used TypeScript, Next.js and MUI to build the user interface of a finance application.'
+  }
 ]
 
 export function ExperienceSection() {
   return (
-    <section className="space-y-6">
-      <h2 className="text-lg font-semibold">Work Experience</h2>
+    <section className='space-y-6'>
+      <SectionTitle>Work Experience</SectionTitle>
 
-      <div className="space-y-8">
-        {experiences.map((exp) => (
-          <div key={exp.company} className="space-y-3">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-              <h3 className="font-medium">{exp.company}</h3>
-              <span className="text-sm text-muted-foreground">{exp.period}</span>
+      <div className='space-y-8'>
+        {experiences.map((exp, i) => (
+          <div key={i} className='space-y-3'>
+            <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1'>
+              <h3 className='font-semibold'>{exp.company}</h3>
+              <span className='text-sm text-muted-foreground'>{exp.period}</span>
             </div>
-            
-            <p className="text-sm text-muted-foreground">{exp.role}</p>
-            
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className='text-sm text-muted-foreground'>{exp.role}</p>
+            <p className='text-sm font-light text-muted-foreground leading-relaxed'>
               {exp.description}
             </p>
-
-            <div className="space-y-2">
-              <p className="text-sm font-medium">Key contributions:</p>
-              <ul className="space-y-1.5 text-sm text-muted-foreground">
-                {exp.highlights.map((highlight, index) => (
-                  <li key={index} className="flex gap-2">
-                    <span className="text-muted-foreground/50">-</span>
-                    <span>{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         ))}
       </div>
