@@ -3,40 +3,63 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _geist = Geist({ subsets: ['latin'] })
+const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Ignacio Biran',
-  description: 'Frontend Engineer - Building modern web applications',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: 'Ignacio Biran | Frontend Developer',
+  description:
+    'Frontend Developer specializing in React, TypeScript, and Next.js. Building microfrontends and scalable web applications. Based in Argentina.',
+  keywords: [
+    'Ignacio Biran',
+    'Frontend Developer',
+    'React Developer',
+    'TypeScript',
+    'Next.js',
+    'Web Developer Argentina',
+    'Microfrontends',
+    'Software Engineer'
+  ],
+  authors: [{ name: 'Ignacio Biran', url: 'https://github.com/NBN7' }],
+  creator: 'Ignacio Biran',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Ignacio Biran | Frontend Developer',
+    description:
+      'Frontend Developer specializing in React, TypeScript, and Next.js. Building microfrontends and scalable web applications.',
+    siteName: 'Ignacio Biran'
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ignacio Biran | Frontend Developer',
+    description:
+      'Frontend Developer specializing in React, TypeScript, and Next.js. Building microfrontends and scalable web applications.'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  icons: {
+    icon: { url: '/icon.svg', type: 'image/svg+xml' }
+  }
 }
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark bg-background">
-      <body className="font-sans antialiased bg-background text-foreground">
+    <html lang='en' className='dark bg-background'>
+      <body className='font-sans antialiased bg-background text-foreground min-h-dvh'>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
