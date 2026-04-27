@@ -1,3 +1,5 @@
+import { SectionTitle } from '@/components/section-title'
+
 interface Education {
   institution: string
   degree: string
@@ -7,26 +9,31 @@ interface Education {
 
 const education: Education[] = [
   {
-    institution: "University",
-    degree: "Bachelor&apos;s Degree",
-    field: "Computer Science",
-    period: "2018 - 2022",
+    institution: 'UTN - Facultad Regional San Nicolás',
+    degree: 'Engineering',
+    field: 'Computer Systems',
+    period: '2026 - Present'
   },
+  {
+    institution: 'UTN - Facultad Regional San Nicolás',
+    degree: 'Technical Degree',
+    field: 'Computer Programming',
+    period: '2022 - 2023'
+  }
 ]
 
 export function EducationSection() {
   return (
-    <section className="space-y-6">
-      <h2 className="text-lg font-semibold">Education</h2>
-
-      <div className="space-y-4">
-        {education.map((edu) => (
-          <div key={edu.institution} className="space-y-1">
-            <h3 className="font-medium">{edu.institution}</h3>
-            <p className="text-sm text-muted-foreground">
+    <section className='space-y-6'>
+      <SectionTitle>Education</SectionTitle>
+      <div className='space-y-4'>
+        {education.map(edu => (
+          <div key={edu.period} className='space-y-1'>
+            <h3 className='font-semibold'>{edu.institution}</h3>
+            <p className='text-sm font-light text-muted-foreground'>
               {edu.degree}, {edu.field}
             </p>
-            <p className="text-sm text-muted-foreground">{edu.period}</p>
+            <p className='text-sm text-muted-foreground'>{edu.period}</p>
           </div>
         ))}
       </div>
