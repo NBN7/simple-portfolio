@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { Badge } from '@/components/ui/badge'
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
@@ -7,7 +8,7 @@ interface Project {
   title: string
   type?: string
   technologies: string[]
-  description: string
+  descriptionKey: string
   link?: string
 }
 
@@ -16,40 +17,38 @@ const projects: Project[] = [
     title: 'Lauro Barber',
     type: 'Freelance',
     technologies: ['Next.js', 'TypeScript', 'Shadcn UI', 'Prisma ORM', 'PostgreSQL'],
-    description:
-      'Aplicación para reserva de turnos con dashboard para administrador con capacidad de editar, eliminar y bloquear usuarios, ranking de puntos para canjear por productos o descuentos y promover la fidelidad de los clientes y perfiles customizables.',
+    descriptionKey: 'lauroBarber',
     link: 'https://laurobarber.vercel.app/'
   },
   {
     title: 'Kaptia',
     type: 'Freelance',
-    technologies: ['Next.js', 'TypeScript', 'Shadcn UI', 'Prisma ORM', 'Node.js', 'Turborepo'],
-    description:
-      'Platform that automates portfolio analysis for accounting, financial, and professional services firms. Provides tools for data visualization, report generation, and client management to streamline daily workflows.',
+    technologies: ['Next.js', 'TypeScript', 'Node.js', 'Prisma ORM', 'Turborepo'],
+    descriptionKey: 'kaptia',
     link: 'https://kaptia.com.ar/landing'
   },
   {
     title: 'MDG',
     type: 'Freelance',
     technologies: ['Next.js', 'TypeScript', 'Shadcn UI', 'Prisma ORM', 'PostgreSQL'],
-    description:
-      'Web application for healthcare professionals to speed up daily tasks and generate documentation. Built with a modern stack to provide a fast, reliable, and intuitive user experience.',
+    descriptionKey: 'mdg',
     link: 'https://mdg-lab.vercel.app/'
   },
   {
     title: 'Simple Imposter',
     type: 'Hobby',
-    technologies: ['Next.js', 'TypeScript', 'Shadcn UI', 'Redis'],
-    description:
-      'App to play the popular "Imposter" game. It has +10k visits since launch and reached +10 simultaneous players. Features local and multiplayer modes using Server Side Events.',
+    technologies: ['Next.js', 'TypeScript', 'Redis', 'Shadcn UI'],
+    descriptionKey: 'simpleImposter',
     link: 'https://simpleimpostor.vercel.app/'
   }
 ]
 
 export function ProjectsSection() {
+  const t = useTranslations('projects')
+
   return (
     <section className='space-y-6'>
-      <SectionTitle>Projects</SectionTitle>
+      <SectionTitle>{t('title')}</SectionTitle>
 
       <div className='space-y-6'>
         {projects.map(project => (
@@ -89,7 +88,7 @@ export function ProjectsSection() {
             </div>
 
             <p className='text-sm font-light text-muted-foreground leading-relaxed'>
-              {project.description}
+              {t(project.descriptionKey)}
             </p>
           </div>
         ))}

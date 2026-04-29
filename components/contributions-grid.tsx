@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { SectionTitle } from '@/components/section-title'
 
@@ -15,6 +16,7 @@ const levelColors = [
 ]
 
 export function ContributionsGrid() {
+  const t = useTranslations('contributions')
   const [weeks, setWeeks] = useState<number[][]>([])
   const [months, setMonths] = useState<string[]>([])
 
@@ -29,7 +31,7 @@ export function ContributionsGrid() {
 
   return (
     <section className='space-y-4'>
-      <SectionTitle>Contributions</SectionTitle>
+      <SectionTitle>{t('title')}</SectionTitle>
 
       <div className='overflow-x-auto'>
         <div className='inline-block'>
@@ -61,29 +63,26 @@ export function ContributionsGrid() {
               ))}
             </div>
           </div>
+
         </div>
       </div>
 
       <div className='flex items-center gap-2 text-xs text-muted-foreground justify-end'>
-        <span>Less</span>
+        <span>{t('less')}</span>
         <div className='flex gap-0.75'>
           {levelColors.map((color, i) => (
             <div key={i} className={`size-2.5 rounded-[2px] ${color}`} />
           ))}
         </div>
-        <span>More</span>
+        <span>{t('more')}</span>
       </div>
 
       <p className='text-xs text-muted-foreground'>
-        Contributions of{' '}
-        <Link
-          href='https://github.com/NBN7'
-          target='_blank'
-          className='text-foreground hover:underline'
-        >
+        {t('text')}{' '}
+        <Link href='https://github.com/NBN7' target='_blank' className='text-emerald-500 hover:underline'>
           @NBN7
         </Link>{' '}
-        on GitHub.
+        {t('on')}
       </p>
     </section>
   )

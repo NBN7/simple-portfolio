@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "subtitle": "Frontend Engineer",
+    "description": "Building modern web applications with React, TypeScript, and Next.js. Passionate about creating intuitive user experiences with clean and maintainable code."
+  },
+  "contributions": {
+    "title": "Contributions",
+    "text": "Contributions of",
+    "on": "on GitHub.",
+    "less": "Less",
+    "more": "More"
+  },
+  "projects": {
+    "title": "Projects",
+    "simpleImposter": "App to play the popular \"Imposter\" game. It has +10k visits since launch and reached +10 simultaneous players. Features local and multiplayer modes using Server Side Events.",
+    "lauroBarber": "Appointment booking app with admin dashboard to edit, delete and block users, points ranking to redeem for products or discounts to promote customer loyalty, and customizable profiles.",
+    "kaptia": "Platform that automates portfolio analysis for accounting, financial, and professional services firms. Provides tools for data visualization, report generation, and client management to streamline daily workflows.",
+    "mdg": "Web application for healthcare professionals to speed up daily tasks and generate documentation. Built with a modern stack to provide a fast, reliable, and intuitive user experience."
+  },
+  "experience": {
+    "title": "Work Experience",
+    "auravantSsr": "Frontend developer for Auravant with greater responsibilities. I build and maintain microfrontends, the company's internal component library, and scalable web applications for an agricultural sector platform using TypeScript, React.js and Auravant proprietary SDK.",
+    "auravantJr": "Frontend developer for Auravant. I used TypeScript, React.js, shadcn and Auravant proprietary SDK to build microfrontends and web applications for an agricultural sector platform.",
+    "sturgesFullstack": "Fullstack developer for Sturges Labs LLC. I worked on a finance application. For the Frontend, I used TypeScript, Next.js, and MUI. For the Backend, I employed TypeScript, tRPC, Clerk, MySQL and Prisma.",
+    "sturgesFrontend": "Frontend developer for Sturges Labs LLC. I used TypeScript, Next.js and MUI to build the user interface of a finance application."
+  },
+  "education": {
+    "title": "Education"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

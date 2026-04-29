@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { HeroSection } from '@/components/hero-section'
 import { ContributionsGrid } from '@/components/contributions-grid'
 import { ProjectsSection } from '@/components/projects-section'
@@ -15,6 +16,8 @@ const jsonLd = {
 }
 
 export default function Home() {
+  const t = useTranslations('footer')
+
   return (
     <>
       <script
@@ -30,7 +33,7 @@ export default function Home() {
           <EducationSection />
           <footer role='contentinfo' className='pt-8 border-t border-border'>
             <p className='text-sm text-muted-foreground text-center'>
-              © {new Date().getFullYear()} Ignacio Biran. All rights reserved.
+              © {new Date().getFullYear()} Ignacio Biran. {t('rights')}
             </p>
           </footer>
         </div>
