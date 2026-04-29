@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import { NextIntlClientProvider, hasLocale } from 'next-intl'
+import { notFound } from 'next/navigation'
+import { routing } from '@/i18n/routing'
+import '../globals.css'
 
 const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
@@ -52,15 +55,20 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
-  children
+export default async function RootLayout({
+  children,
+  params
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) notFound()
+
   return (
-    <html lang='en' className='dark bg-background'>
+    <html lang={locale} className='dark bg-background'>
       <body className='font-sans antialiased bg-background text-foreground min-h-dvh'>
-        {children}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

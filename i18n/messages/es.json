@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "subtitle": "Desarrollador Frontend",
+    "description": "Construyendo aplicaciones web modernas con React, TypeScript y Next.js. Apasionado por crear experiencias de usuario intuitivas con código limpio y mantenible."
+  },
+  "contributions": {
+    "title": "Contribuciones",
+    "text": "Contribuciones de",
+    "on": "en GitHub.",
+    "less": "Menos",
+    "more": "Más"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "simpleImposter": "App para jugar al conocido juego \"El impostor\". Cuenta con +10k visitas desde que salió, llegó a +10 jugadores en simultáneo. Cuenta con juego local y multijugador utilizando Server Side Events.",
+    "lauroBarber": "Aplicación para reserva de turnos con dashboard para administrador con capacidad de editar, eliminar y bloquear usuarios, ranking de puntos para canjear por productos o descuentos y promover la fidelidad de los clientes y perfiles customizables.",
+    "kaptia": "Plataforma que automatiza el análisis de carteras para estudios contables, financieros y de servicios profesionales. Provee herramientas de visualización de datos, generación de reportes y gestión de clientes para agilizar flujos de trabajo.",
+    "mdg": "Aplicación web para profesionales de la salud que acelera tareas diarias y genera documentación. Construida con un stack moderno para brindar una experiencia rápida, confiable e intuitiva."
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "auravantSsr": "Desarrollador frontend en Auravant con mayores responsabilidades. Construyo y mantengo microfrontends, la librería interna de componentes de la empresa y aplicaciones web escalables para una plataforma del sector agropecuario usando TypeScript, React.js y el SDK propietario de Auravant.",
+    "auravantJr": "Desarrollador frontend en Auravant. Usé TypeScript, React.js, shadcn y el SDK propietario de Auravant para construir microfrontends y aplicaciones web para una plataforma del sector agropecuario.",
+    "sturgesFullstack": "Desarrollador fullstack en Sturges Labs LLC. Trabajé en una aplicación de finanzas. Para el Frontend usé TypeScript, Next.js y MUI. Para el Backend empleé TypeScript, tRPC, Clerk, MySQL y Prisma.",
+    "sturgesFrontend": "Desarrollador frontend en Sturges Labs LLC. Usé TypeScript, Next.js y MUI para construir la interfaz de usuario de una aplicación de finanzas."
+  },
+  "education": {
+    "title": "Educación"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

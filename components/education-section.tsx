@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { SectionTitle } from '@/components/section-title'
 
 interface Education {
@@ -23,9 +24,11 @@ const education: Education[] = [
 ]
 
 export function EducationSection() {
+  const t = useTranslations('education')
+
   return (
     <section className='space-y-6'>
-      <SectionTitle>Education</SectionTitle>
+      <SectionTitle>{t('title')}</SectionTitle>
       <div className='space-y-4'>
         {education.map(edu => (
           <div key={edu.period} className='space-y-1'>
