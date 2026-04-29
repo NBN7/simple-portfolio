@@ -15,17 +15,26 @@ const levelColors = [
   'bg-emerald-500'
 ]
 
+let cachedData: { weeks: number[][]; months: string[] } | null = null
+
 export function ContributionsGrid() {
   const t = useTranslations('contributions')
   const [weeks, setWeeks] = useState<number[][]>([])
   const [months, setMonths] = useState<string[]>([])
 
   useEffect(() => {
+    if (cachedData) {
+      setWeeks(cachedData.weeks)
+      setMonths(cachedData.months)
+      return
+    }
     fetch('/api/contributions')
       .then(r => r.json())
       .then(data => {
-        setWeeks(data.weeks.slice(-44))
-        setMonths(data.months)
+        const result = { weeks: data.weeks.slice(-44), months: data.months }
+        cachedData = result
+        setWeeks(result.weeks)
+        setMonths(result.months)
       })
   }, [])
 
@@ -63,7 +72,6 @@ export function ContributionsGrid() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
 
@@ -79,7 +87,11 @@ export function ContributionsGrid() {
 
       <p className='text-xs text-muted-foreground'>
         {t('text')}{' '}
-        <Link href='https://github.com/NBN7' target='_blank' className='text-emerald-500 hover:underline'>
+        <Link
+          href='https://github.com/NBN7'
+          target='_blank'
+          className='text-emerald-500 hover:underline'
+        >
           @NBN7
         </Link>{' '}
         {t('on')}
