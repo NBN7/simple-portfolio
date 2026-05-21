@@ -25,7 +25,13 @@
     "sturgesFrontend": "Desarrollador frontend en Sturges Labs LLC. Usé TypeScript, Next.js y MUI para construir la interfaz de usuario de una aplicación de finanzas."
   },
   "education": {
-    "title": "Educación"
+    "title": "Educación",
+    "degree1": "Ingeniería",
+    "field1": "Sistemas de Información",
+    "period1": "2026 - Presente",
+    "degree2": "Tecnicatura",
+    "field2": "Programación de Computadoras",
+    "period2": "2022 - 2023"
   },
   "footer": {
     "rights": "Casi todos los derechos reservados."
