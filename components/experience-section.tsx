@@ -11,6 +11,12 @@ interface Experience {
 const experiences: Experience[] = [
   {
     company: 'Auravant',
+    period: 'Jul. 2026 - Present',
+    role: 'AI Engineer',
+    descriptionKey: 'auravantAi'
+  },
+  {
+    company: 'Auravant',
     period: 'Mar. 2026 - Present',
     role: 'SSR Frontend Developer',
     descriptionKey: 'auravantSsr'
