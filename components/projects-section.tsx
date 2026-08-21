@@ -14,6 +14,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Ticketeame',
+    type: 'Freelance',
+    technologies: ['Next.js', 'TypeScript', 'Shadcn UI', 'Prisma ORM', 'PostgreSQL'],
+    descriptionKey: 'ticketeame',
+    link: 'https://ticketea-me.vercel.app/'
+  },
+  {
     title: 'Lauro Barber',
     type: 'Freelance',
     technologies: ['Next.js', 'TypeScript', 'Shadcn UI', 'Prisma ORM', 'PostgreSQL'],

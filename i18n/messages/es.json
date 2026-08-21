@@ -15,10 +15,12 @@
     "simpleImposter": "App para jugar al conocido juego \"El impostor\". Cuenta con +10k visitas desde que salió, llegó a +10 jugadores en simultáneo. Cuenta con juego local y multijugador utilizando Server Side Events.",
     "lauroBarber": "Aplicación para reserva de turnos con dashboard para administrador con capacidad de editar, eliminar y bloquear usuarios, ranking de puntos para canjear por productos o descuentos y promover la fidelidad de los clientes y perfiles customizables.",
     "kaptia": "Plataforma que automatiza el análisis de carteras para estudios contables, financieros y de servicios profesionales. Provee herramientas de visualización de datos, generación de reportes y gestión de clientes para agilizar flujos de trabajo.",
-    "mdg": "Aplicación web para profesionales de la salud que acelera tareas diarias y genera documentación. Construida con un stack moderno para brindar una experiencia rápida, confiable e intuitiva."
+    "mdg": "Aplicación web para profesionales de la salud que acelera tareas diarias y genera documentación. Construida con un stack moderno para brindar una experiencia rápida, confiable e intuitiva.",
+    "ticketeame": "Aplicación web para la gestión de eventos y venta de entradas. Permite a los organizadores crear eventos, vender entradas y gestionar asistentes, mientras que los usuarios pueden descubrir eventos, comprar entradas y recibir notificaciones."
   },
   "experience": {
     "title": "Experiencia Laboral",
+    "auravantAi": "AI Engineer en Auravant. Desarrollo soluciones de IA generativa y automatizaciones aplicadas a procesos internos de Auravant. Diseño y construcción de un sistema RAG (Retrieval-Augmented Generation), integrando un chatbot con una base de datos vectorial y un LLM (Large Language Model) para consultar y recuperar información relevante de forma contextual.",
     "auravantSsr": "Desarrollador frontend en Auravant con mayores responsabilidades. Construyo y mantengo microfrontends, la librería interna de componentes de la empresa y aplicaciones web escalables para una plataforma del sector agropecuario usando TypeScript, React.js y el SDK propietario de Auravant.",
     "auravantJr": "Desarrollador frontend en Auravant. Usé TypeScript, React.js, shadcn y el SDK propietario de Auravant para construir microfrontends y aplicaciones web para una plataforma del sector agropecuario.",
     "sturgesFullstack": "Desarrollador fullstack en Sturges Labs LLC. Trabajé en una aplicación de finanzas. Para el Frontend usé TypeScript, Next.js y MUI. Para el Backend empleé TypeScript, tRPC, Clerk, MySQL y Prisma.",
